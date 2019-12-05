@@ -1,0 +1,4 @@
+fw.obj, dscr.obj, slave.obj, 
+USBJmpTb.obj, 
+EZUSB.lib  
+TO slave RAMSIZE(256) PL(68) PW(78) CODE(80h) XDATA(1000h)  
