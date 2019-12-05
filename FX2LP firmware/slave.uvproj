@@ -32,11 +32,11 @@
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile></SFDFile>
           <bCustSvd>0</bCustSvd>
-          <UseEnv>1</UseEnv>
+          <UseEnv>0</UseEnv>
           <BinPath>C:\Keil\C51\BIN\</BinPath>
           <IncludePath>c:\Cypress\USB\Target\Inc\;C:\Keil\C51\INC\</IncludePath>
           <LibPath>C:\Keil\C51\LIB\</LibPath>
-          <RegisterFilePath>.\\..\..\..\..\Fw\Ezusb\</RegisterFilePath>
+          <RegisterFilePath>.\;C:\Keil\C51\INC\\..\..\..\..\Fw\Ezusb\</RegisterFilePath>
           <DBRegisterFilePath>Anchor\</DBRegisterFilePath>
           <TargetStatus>
             <Error>0</Error>

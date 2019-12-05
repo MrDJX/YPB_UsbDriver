@@ -1,11 +1,11 @@
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 1   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 1   
 
 
-C51 COMPILER V7.07, COMPILATION OF MODULE SLAVE
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE SLAVE
 OBJECT MODULE PLACED IN slave.OBJ
-COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE slave.c OPTIMIZE(6,SPEED) DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE slave.c OPTIMIZE(6,SPEED) DEBUG OBJECTEXTEND TABS(2)
 
-stmt level    source
+line level    source
 
    1          #pragma NOIV                    // Do not generate interrupt vectors
    2          //-----------------------------------------------------------------------------
@@ -62,7 +62,7 @@ stmt level    source
   53          // sbit PB5 = IOB ^ 5;
   54          // sbit PB6 = IOB ^ 6;
   55          // sbit PB7 = IOB ^ 7;
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 2   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 2   
 
   56          
   57          // EZUSB FX2 PORTD = FD[15:8], when IFCFG[1:0]=11 and WORDWIDE=1
@@ -95,11 +95,11 @@ stmt level    source
   84   1        CPUCS = 0x12; // CLKSPD[1:0]=10, for 48MHz operation, output CLKOUT
   85   1      
   86   1        //配置FIFO标志输出，FLAG B配置为EP2 OUT FIFO空标志
-  87   1        PINFLAGSAB = 0x81;                    // FLAGB - EP2EF
+  87   1        PINFLAGSAB = 0x81;      // FLAGB - EP2EF
   88   1        SYNCDELAY;
   89   1      
   90   1        //配置FIFO标志输出，FLAG C配置为EP6 IN FIFO满标志
-  91   1        PINFLAGSCD = 0x1E;                    // FLAGC - EP6FF
+  91   1        PINFLAGSCD = 0x1E;      // FLAGC - EP6FF
   92   1        SYNCDELAY;
   93   1      
   94   1         //配置FIFO标志输出，FLAG G配置为EP2 OUT FIFO空标志
@@ -126,7 +126,7 @@ stmt level    source
  115   1        FIFORESET = 0x80;             // activate NAK-ALL to avoid race conditions
  116   1        SYNCDELAY;                    // see TRM section 15.14
  117   1        FIFORESET = 0x02;             // reset, FIFO 2
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 3   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 3   
 
  118   1        SYNCDELAY;                    // 
  119   1        FIFORESET = 0x04;             // reset, FIFO 4
@@ -190,7 +190,7 @@ stmt level    source
  177   2          EP6AUTOINLENL = 0x00;
  178   2          SYNCDELAY;
  179   2          EP8AUTOINLENL = 0x00;
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 4   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 4   
 
  180   2        }
  181   1        else
@@ -254,7 +254,7 @@ stmt level    source
  239          // USB Interrupt Handlers
  240          //   The following functions are called by the USB interrupt jump table.
  241          //-----------------------------------------------------------------------------
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 5   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 5   
 
  242          
  243          // Setup Data Available Interrupt Handler
@@ -318,7 +318,7 @@ stmt level    source
  301   1         EZUSB_IRQ_CLEAR( );
  302   1         USBIRQ = bmHSGRANT;
  303   1      }
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 6   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 6   
 
  304          void ISR_Ep0ack( void ) interrupt 0
  305          {
@@ -382,7 +382,7 @@ stmt level    source
  363   1      }
  364          void ISR_Ep6piderror( void ) interrupt 0
  365          {
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 7   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 7   
 
  366   1      }
  367          void ISR_Ep8piderror( void ) interrupt 0
@@ -446,52 +446,52 @@ stmt level    source
  425          BYTE xdata LED_State = 0;
  426          void LED_Off (BYTE LED_Mask)
  427          {
-C51 COMPILER V7.07   SLAVE                                                                 11/14/2018 16:56:27 PAGE 8   
+C51 COMPILER V9.59.0.0   SLAVE                                                             12/05/2019 15:56:57 PAGE 8   
 
- 428   1              if (LED_Mask & bmBIT0)
- 429   1              {
- 430   2                      ledX_rdvar = LED0_OFF;
- 431   2                      LED_State &= ~bmBIT0;
- 432   2              }
- 433   1              if (LED_Mask & bmBIT1)
- 434   1              {
- 435   2                      ledX_rdvar = LED1_OFF;
- 436   2                      LED_State &= ~bmBIT1;
- 437   2              }
- 438   1              if (LED_Mask & bmBIT2)
- 439   1              {
- 440   2                      ledX_rdvar = LED2_OFF;
- 441   2                      LED_State &= ~bmBIT2;
- 442   2              }
- 443   1              if (LED_Mask & bmBIT3)
- 444   1              {
- 445   2                      ledX_rdvar = LED3_OFF;
- 446   2                      LED_State &= ~bmBIT3;
- 447   2              }
+ 428   1        if (LED_Mask & bmBIT0)
+ 429   1        {
+ 430   2          ledX_rdvar = LED0_OFF;
+ 431   2          LED_State &= ~bmBIT0;
+ 432   2        }
+ 433   1        if (LED_Mask & bmBIT1)
+ 434   1        {
+ 435   2          ledX_rdvar = LED1_OFF;
+ 436   2          LED_State &= ~bmBIT1;
+ 437   2        }
+ 438   1        if (LED_Mask & bmBIT2)
+ 439   1        {
+ 440   2          ledX_rdvar = LED2_OFF;
+ 441   2          LED_State &= ~bmBIT2;
+ 442   2        }
+ 443   1        if (LED_Mask & bmBIT3)
+ 444   1        {
+ 445   2          ledX_rdvar = LED3_OFF;
+ 446   2          LED_State &= ~bmBIT3;
+ 447   2        }
  448   1      }
  449          
  450          void LED_On (BYTE LED_Mask)
  451          {
- 452   1              if (LED_Mask & bmBIT0)
- 453   1              {
- 454   2                      ledX_rdvar = LED0_ON;
- 455   2                      LED_State |= bmBIT0;
- 456   2              }
- 457   1              if (LED_Mask & bmBIT1)
- 458   1              {
- 459   2                      ledX_rdvar = LED1_ON;
- 460   2                      LED_State |= bmBIT1;
- 461   2              }
- 462   1              if (LED_Mask & bmBIT2)
- 463   1              {
- 464   2                      ledX_rdvar = LED2_ON;
- 465   2                      LED_State |= bmBIT2;
- 466   2              }
- 467   1              if (LED_Mask & bmBIT3)
- 468   1              {
- 469   2                      ledX_rdvar = LED3_ON;
- 470   2                      LED_State |= bmBIT3;
- 471   2              }
+ 452   1        if (LED_Mask & bmBIT0)
+ 453   1        {
+ 454   2          ledX_rdvar = LED0_ON;
+ 455   2          LED_State |= bmBIT0;
+ 456   2        }
+ 457   1        if (LED_Mask & bmBIT1)
+ 458   1        {
+ 459   2          ledX_rdvar = LED1_ON;
+ 460   2          LED_State |= bmBIT1;
+ 461   2        }
+ 462   1        if (LED_Mask & bmBIT2)
+ 463   1        {
+ 464   2          ledX_rdvar = LED2_ON;
+ 465   2          LED_State |= bmBIT2;
+ 466   2        }
+ 467   1        if (LED_Mask & bmBIT3)
+ 468   1        {
+ 469   2          ledX_rdvar = LED3_ON;
+ 470   2          LED_State |= bmBIT3;
+ 471   2        }
  472   1      }
  473          
 
