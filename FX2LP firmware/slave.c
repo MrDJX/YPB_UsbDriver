@@ -11,7 +11,6 @@
 #include "fx2regs.h"
 #include "fx2sdly.h"            // SYNCDELAY macro
 
-#define LED_ALL         (bmBIT0 | bmBIT1 | bmBIT2 | bmBIT3)
 
 extern BOOL GotSUD;             // Received setup data flag
 extern BOOL Sleep;
@@ -20,8 +19,6 @@ extern BOOL Selfpwr;
 
 BYTE Configuration;             // Current configuration
 BYTE AlternateSetting;          // Alternate settings
-static WORD xdata LED_Count = 0;
-static BYTE xdata LED_Status = 0;
 BOOL done_frm_fpga = 0;
 
 // EZUSB FX2 PORTA = slave fifo enable(s), when IFCFG[1:0]=11
@@ -83,12 +80,12 @@ void TD_Init( void )
   //设置8051的工作频率为48MHz
   CPUCS = 0x12; // CLKSPD[1:0]=10, for 48MHz operation, output CLKOUT
 
-  //配置FIFO标志输出，FLAG B配置为EP2 OUT FIFO空标志
-  PINFLAGSAB = 0x81;			// FLAGB - EP2EF
+  //配置FIFO标志输出，FLAG B配置为EP2 OUT FIFO空标志,，FLAG A配置为EP4 OUT FIFO空标志,
+  PINFLAGSAB = 0x89;			// FLAGB - EP2EF   // FLAGA - EP4EF
   SYNCDELAY;
 
-  //配置FIFO标志输出，FLAG C配置为EP6 IN FIFO满标志
-  PINFLAGSCD = 0x1E;			// FLAGC - EP6FF
+  //配置FIFO标志输出，FLAG C配置为EP6 IN FIFO满标志,FLAG D配置为EP8 IN FIFO满标志
+  PINFLAGSCD = 0xFE;			// FLAGC - EP6FF  // FLAGD - EP6FF
   SYNCDELAY;
 
    //配置FIFO标志输出，FLAG G配置为EP2 OUT FIFO空标志
@@ -98,16 +95,20 @@ void TD_Init( void )
 //Slave使用内部48MHz的时钟
   IFCONFIG = 0xE3; //Internal clock, 48 MHz, Slave FIFO interface
   SYNCDELAY;
- 
+	
+  EP1OUTCFG = 0xA0;
+  EP1INCFG = 0xA0;
+	
 //将EP2断端点配置为BULK-OUT端点，使用4倍缓冲，512字节FIFO             
   EP2CFG = 0xA0;                //out 512 bytes, 4x, bulk
   SYNCDELAY;
 //将EP6配置为BULK-OUT端点，                    
   EP6CFG = 0xE0;                // in 512 bytes, 4x, bulk
   SYNCDELAY;              
-  EP4CFG = 0x02;                //clear valid bit
+	
+  EP4CFG = 0xA0;                
   SYNCDELAY;                     
-  EP8CFG = 0x02;                //clear valid bit
+  EP8CFG = 0xE0;                
   SYNCDELAY;   
 
   //复位FIFO
@@ -137,7 +138,12 @@ void TD_Init( void )
   
   SYNCDELAY;                    // 
   EP6FIFOCFG = 0x0D;            // AUTOIN=1, ZEROLENIN=1, WORDWIDE=1
-
+	
+  SYNCDELAY;                    // 
+  EP4FIFOCFG = 0x11;            // AUTOOUT=1, WORDWIDE=1
+  
+  SYNCDELAY;                    // 
+  EP8FIFOCFG = 0x0D;            // AUTOIN=1, ZEROLENIN=1, WORDWIDE=1
   SYNCDELAY;
 }
 
@@ -408,66 +414,5 @@ void ISR_GpifComplete( void ) interrupt 0
 }
 void ISR_GpifWaveform( void ) interrupt 0
 {
-}
-
-// ...debug LEDs: accessed via movx reads only ( through CPLD )
-// it may be worth noting here that the default monitor loads at 0xC000
-xdata volatile const BYTE LED0_ON  _at_ 0x8000;
-xdata volatile const BYTE LED0_OFF _at_ 0x8100;
-xdata volatile const BYTE LED1_ON  _at_ 0x9000;
-xdata volatile const BYTE LED1_OFF _at_ 0x9100;
-xdata volatile const BYTE LED2_ON  _at_ 0xA000;
-xdata volatile const BYTE LED2_OFF _at_ 0xA100;
-xdata volatile const BYTE LED3_ON  _at_ 0xB000;
-xdata volatile const BYTE LED3_OFF _at_ 0xB100;
-// use this global variable when (de)asserting debug LEDs...
-BYTE xdata ledX_rdvar = 0x00;
-BYTE xdata LED_State = 0;
-void LED_Off (BYTE LED_Mask)
-{
-	if (LED_Mask & bmBIT0)
-	{
-		ledX_rdvar = LED0_OFF;
-		LED_State &= ~bmBIT0;
-	}
-	if (LED_Mask & bmBIT1)
-	{
-		ledX_rdvar = LED1_OFF;
-		LED_State &= ~bmBIT1;
-	}
-	if (LED_Mask & bmBIT2)
-	{
-		ledX_rdvar = LED2_OFF;
-		LED_State &= ~bmBIT2;
-	}
-	if (LED_Mask & bmBIT3)
-	{
-		ledX_rdvar = LED3_OFF;
-		LED_State &= ~bmBIT3;
-	}
-}
-
-void LED_On (BYTE LED_Mask)
-{
-	if (LED_Mask & bmBIT0)
-	{
-		ledX_rdvar = LED0_ON;
-		LED_State |= bmBIT0;
-	}
-	if (LED_Mask & bmBIT1)
-	{
-		ledX_rdvar = LED1_ON;
-		LED_State |= bmBIT1;
-	}
-	if (LED_Mask & bmBIT2)
-	{
-		ledX_rdvar = LED2_ON;
-		LED_State |= bmBIT2;
-	}
-	if (LED_Mask & bmBIT3)
-	{
-		ledX_rdvar = LED3_ON;
-		LED_State |= bmBIT3;
-	}
 }
 

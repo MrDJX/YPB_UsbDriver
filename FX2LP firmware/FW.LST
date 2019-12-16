@@ -1,4 +1,4 @@
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 1   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 1   
 
 
 C51 COMPILER V9.59.0.0, COMPILATION OF MODULE FW
@@ -62,7 +62,7 @@ line level    source
   53          BOOL      Selfpwr;
   54          volatile BOOL   Sleep;                  // Sleep mode enable flag
   55          
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 2   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 2   
 
   56          WORD   pDeviceDscr;   // Pointer to Device Descriptor; Descriptors may be moved
   57          WORD   pDeviceQualDscr;
@@ -126,7 +126,7 @@ line level    source
  115   1         // Initialize Global States
  116   1         Sleep = FALSE;               // Disable sleep mode
  117   1         Rwuen = FALSE;               // Disable remote wakeup
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 3   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 3   
 
  118   1         Selfpwr = FALSE;            // Disable self powered
  119   1         GotSUD = FALSE;               // Clear "Got setup data" flag
@@ -190,7 +190,7 @@ line level    source
  177   1      #ifndef NO_RENUM
  178   1         // Renumerate if necessary.  Do this by checking the renum bit.  If it
  179   1         // is already set, there is no need to renumerate.  The renum bit will
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 4   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 4   
 
  180   1         // already be set if this firmware was loaded from an eeprom.
  181   1         if(!(USBCS & bmRENUM))
@@ -254,7 +254,7 @@ line level    source
  238          
  239          // Device request parser
  240          void SetupCommand(void)
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 5   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 5   
 
  241          {
  242   1         void   *dscr_ptr;
@@ -318,7 +318,7 @@ line level    source
  300   3                        break;
  301   3                     case GS_INTERFACE:         // Interface
  302   3                        EP0BUF[0] = 0;
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 6   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 6   
 
  303   3                        EP0BUF[1] = 0;
  304   3                        EP0BCH = 0;
@@ -382,7 +382,7 @@ line level    source
  362   2                  EZUSB_STALL_EP0();            // Stall End Point 0
  363   2         }
  364   1      
-C51 COMPILER V9.59.0.0   FW                                                                12/05/2019 15:56:52 PAGE 7   
+C51 COMPILER V9.59.0.0   FW                                                                12/16/2019 17:31:59 PAGE 7   
 
  365   1         // Acknowledge handshake phase of device request
  366   1         EP0CS |= bmHSNAK;

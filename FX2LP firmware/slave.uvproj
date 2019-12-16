@@ -13,14 +13,14 @@
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
-          <Device>EZ-USB 8051</Device>
-          <Vendor>AnchorChips</Vendor>
-          <Cpu>IRAM(0 - 0xFF) CLOCK(25000000) MODDP2</Cpu>
+          <Device>EZ-USB FX2 (CY7C68XXX)</Device>
+          <Vendor>Cypress</Vendor>
+          <Cpu>IRAM(0-0xFF) IROM(0-0x1FFF) XRAM(0xE000-0xE1FF) CLOCK(48000000) MODDP2</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile></StartupFile>
+          <StartupFile>"LIB\STARTUP.A51" ("Standard 8051 Startup Code")</StartupFile>
           <FlashDriverDll></FlashDriverDll>
-          <DeviceId></DeviceId>
-          <RegisterFile>REG52.H</RegisterFile>
+          <DeviceId>3205</DeviceId>
+          <RegisterFile>FX2REGS.H</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -36,8 +36,8 @@
           <BinPath>C:\Keil\C51\BIN\</BinPath>
           <IncludePath>c:\Cypress\USB\Target\Inc\;C:\Keil\C51\INC\</IncludePath>
           <LibPath>C:\Keil\C51\LIB\</LibPath>
-          <RegisterFilePath>.\;C:\Keil\C51\INC\\..\..\..\..\Fw\Ezusb\</RegisterFilePath>
-          <DBRegisterFilePath>Anchor\</DBRegisterFilePath>
+          <RegisterFilePath>Cypress\</RegisterFilePath>
+          <DBRegisterFilePath>Cypress\</DBRegisterFilePath>
           <TargetStatus>
             <Error>0</Error>
             <ExitCodeStop>0</ExitCodeStop>
@@ -110,11 +110,11 @@
           <SimDllName>S8051.DLL</SimDllName>
           <SimDllArguments></SimDllArguments>
           <SimDlgDll>DP51.DLL</SimDlgDll>
-          <SimDlgDllArguments>-p52</SimDlgDllArguments>
+          <SimDlgDllArguments>-pFX2</SimDlgDllArguments>
           <TargetDllName>S8051.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TP51.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-p52</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pFX2</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -196,8 +196,8 @@
             <UseMultipleDPTR>0</UseMultipleDPTR>
             <UseOnchipXram>0</UseOnchipXram>
             <HadIRAM>1</HadIRAM>
-            <HadXRAM>0</HadXRAM>
-            <HadIROM>0</HadIROM>
+            <HadXRAM>1</HadXRAM>
+            <HadIROM>1</HadIROM>
             <Moda2>0</Moda2>
             <Moddp2>1</Moddp2>
             <Modp2>0</Modp2>
@@ -271,9 +271,9 @@
                 <Size>0x0</Size>
               </Ocr3>
               <IRO>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <Size>0x2000</Size>
               </IRO>
               <IRA>
                 <Type>0</Type>
@@ -282,8 +282,8 @@
               </IRA>
               <XRA>
                 <Type>0</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0xe000</StartAddress>
+                <Size>0x200</Size>
               </XRA>
               <XRA512>
                 <Type>0</Type>
