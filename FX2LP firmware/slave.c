@@ -85,7 +85,7 @@ void TD_Init( void )
   SYNCDELAY;
 
   //配置FIFO标志输出，FLAG C配置为EP6 IN FIFO满标志,FLAG D配置为EP8 IN FIFO满标志
-  PINFLAGSCD = 0xFE;			// FLAGC - EP6FF  // FLAGD - EP6FF
+  PINFLAGSCD = 0xFE;			// FLAGC - EP6FF  // FLAGD - EP8FF
   SYNCDELAY;
 
    //配置FIFO标志输出，FLAG G配置为EP2 OUT FIFO空标志
