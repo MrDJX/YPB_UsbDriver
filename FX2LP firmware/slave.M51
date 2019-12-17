@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/17/2019  08:40:48  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/17/2019  08:47:50  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  slave (FW)
             XDATA   E605H     0001H     ABSOLUTE     
             XDATA   E606H     0001H     ABSOLUTE     
             XDATA   E607H     0001H     ABSOLUTE     
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 2
 
 
             XDATA   E608H     0001H     ABSOLUTE     
@@ -119,7 +119,7 @@ LINK MAP OF MODULE:  slave (FW)
             XDATA   E653H     0001H     ABSOLUTE     
             XDATA   E654H     0001H     ABSOLUTE     
             XDATA   E655H     0001H     ABSOLUTE     
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 3
 
 
             XDATA   E656H     0001H     ABSOLUTE     
@@ -179,7 +179,7 @@ LINK MAP OF MODULE:  slave (FW)
             XDATA   E699H     0001H     ABSOLUTE     
                     E69AH     0002H                  *** GAP ***
             XDATA   E69CH     0001H     ABSOLUTE     
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 4
 
 
             XDATA   E69DH     0001H     ABSOLUTE     
@@ -239,7 +239,7 @@ LINK MAP OF MODULE:  slave (FW)
             XDATA   E6E4H     0001H     ABSOLUTE     
                     E6E5H     0005H                  *** GAP ***
             XDATA   E6EAH     0001H     ABSOLUTE     
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 5
 
 
             XDATA   E6EBH     0001H     ABSOLUTE     
@@ -299,7 +299,7 @@ LINK MAP OF MODULE:  slave (FW)
             CODE    0B69H     0016H     UNIT         ?PR?ISR_SOF?SLAVE
             CODE    0B7FH     0012H     UNIT         ?PR?DR_GETCONFIGURATION?SLAVE
             CODE    0B91H     0012H     UNIT         ?PR?DR_GETINTERFACE?SLAVE
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 6
 
 
             CODE    0BA3H     0011H     UNIT         ?C?LIB_CODE
@@ -359,7 +359,7 @@ OVERLAY MAP OF MODULE:   slave (FW)
 
 SEGMENT                                      BIT_GROUP          DATA_GROUP 
   +--> CALLED SEGMENT                     START    LENGTH     START    LENGTH
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 7
 
 
 -----------------------------------------------------------------------------
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   D:0025H         PUBLIC        pConfigDscr
   D:0027H         PUBLIC        pOtherConfigDscr
   D:0029H         PUBLIC        pFullSpeedConfigDscr
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 8
 
 
   B:0020H.2       PUBLIC        Selfpwr
@@ -479,7 +479,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:070FH         LINE#         165
   C:071AH         LINE#         166
   C:0725H         LINE#         167
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 9
 
 
   C:0725H         LINE#         169
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:036FH         LINE#         257
   C:0372H         LINE#         258
   C:0372H         LINE#         259
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 10
 
 
   C:0378H         LINE#         260
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0485H         LINE#         315
   C:0485H         LINE#         316
   C:0488H         LINE#         317
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 11
 
 
   C:0488H         LINE#         318
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:019AH         PUBLIC        USERDSCR
   N:0002H         SYMBOL        DSCR_CONFIG
   N:0009H         SYMBOL        DSCR_CONFIG_LEN
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 12
 
 
   N:0001H         SYMBOL        DSCR_DEVICE
@@ -719,7 +719,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0BFBH         PUBLIC        ISR_Ep4fflag
   C:0BF8H         PUBLIC        ISR_Ep6eflag
   C:0BFCH         PUBLIC        ISR_Ep6fflag
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 13
 
 
   C:0BD1H         PUBLIC        DR_GetDescriptor
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0923H         LINE#         118
   C:0926H         LINE#         119
   C:0929H         LINE#         120
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 14
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 14
 
 
   C:092CH         LINE#         121
@@ -839,7 +839,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:07B1H         LINE#         187
   C:07B6H         LINE#         188
   C:07B9H         LINE#         189
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 15
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 15
 
 
   C:07BDH         LINE#         190
@@ -899,7 +899,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0BD9H         LINE#         238
   C:0BD9H         LINE#         239
   C:0BDAH         LINE#         240
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 16
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 16
 
 
   -------         ENDPROC       DR_VENDORCMND
@@ -959,7 +959,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0A96H         LINE#         306
   C:0A9CH         LINE#         307
   -------         ENDPROC       ISR_HIGHSPEED
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 17
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 17
 
 
   -------         PROC          ISR_EP0ACK
@@ -1019,7 +1019,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0BE9H         LINE#         349
   -------         ENDPROC       ISR_EP2PINGNAK
   -------         PROC          ISR_EP4PINGNAK
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 18
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 18
 
 
   C:0BEAH         LINE#         350
@@ -1079,7 +1079,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   -------         ENDPROC       ISR_EP4EFLAG
   -------         PROC          ISR_EP6EFLAG
   C:0BF8H         LINE#         392
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 19
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 19
 
 
   C:0BF8H         LINE#         394
@@ -1139,7 +1139,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0AA3H         LINE#         39
   C:0AA3H         LINE#         40
   C:0AA3H         LINE#         42
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 20
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 20
 
 
   C:0AA6H         LINE#         43
@@ -1199,7 +1199,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E684H         PUBLIC        USBFRAMEH
   X:E6F5H         PUBLIC        GPIFABORT
   X:E6AAH         PUBLIC        EP8FIFOFLGS
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 21
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 21
 
 
   X:E6F8H         PUBLIC        DBUG
@@ -1259,7 +1259,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E666H         PUBLIC        INT2IVEC
   X:E659H         PUBLIC        IBNIRQ
   X:E6FBH         PUBLIC        CT1
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 22
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 22
 
 
   X:E6C4H         PUBLIC        GPIFADRH
@@ -1319,7 +1319,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E655H         PUBLIC        EP6FIFOIRQ
   X:E603H         PUBLIC        PINFLAGSCD
   X:E6A4H         PUBLIC        EP4CS
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 23
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 23
 
 
   X:E648H         PUBLIC        INPKTEND
@@ -1379,7 +1379,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   B:00D0H.6       SYMBOL        AC
   D:00E0H         SYMBOL        ACC
   D:009AH         SYMBOL        APTR1H
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 24
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 24
 
 
   D:009BH         SYMBOL        APTR1L
@@ -1439,7 +1439,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E7C0H         SYMBOL        EP1INBUF
   X:E611H         SYMBOL        EP1INCFG
   X:E6A2H         SYMBOL        EP1INCS
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 25
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 25
 
 
   X:E68DH         SYMBOL        EP1OUTBC
@@ -1499,7 +1499,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E6AFH         SYMBOL        EP6FIFOBCH
   X:E6B0H         SYMBOL        EP6FIFOBCL
   X:F800H         SYMBOL        EP6FIFOBUF
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 26
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 26
 
 
   X:E61AH         SYMBOL        EP6FIFOCFG
@@ -1559,7 +1559,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   B:00D0H.1       SYMBOL        FL
   X:E6CCH         SYMBOL        FLOWEDGE
   X:E6C8H         SYMBOL        FLOWEQ0CTL
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 27
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 27
 
 
   X:E6C9H         SYMBOL        FLOWEQ1CTL
@@ -1619,7 +1619,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E65AH         SYMBOL        NAKIE
   X:E65BH         SYMBOL        NAKIRQ
   D:00B2H         SYMBOL        OEA
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 28
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 28
 
 
   D:00B3H         SYMBOL        OEB
@@ -1679,7 +1679,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E6B4H         SYMBOL        SUDPTRL
   N:0000H         SYMBOL        SUSP
   X:E681H         SYMBOL        SUSPEND
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 29
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 29
 
 
   D:00C8H         SYMBOL        T2CON
@@ -1739,7 +1739,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0000H         SYMBOL        _ICE_DUMMY_
   C:09EFH         PUBLIC        _EZUSB_Delay
   -------         PROC          _EZUSB_DELAY
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 30
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 30
 
 
   D:001CH         SYMBOL        ms
@@ -1799,7 +1799,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E62FH         SYMBOL        ECC2B2
   X:E628H         SYMBOL        ECCCFG
   X:E629H         SYMBOL        ECCRESET
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 31
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 31
 
 
   B:00E8H.1       SYMBOL        EI2C
@@ -1859,7 +1859,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:F400H         SYMBOL        EP4FIFOBUF
   X:E619H         SYMBOL        EP4FIFOCFG
   X:E6A8H         SYMBOL        EP4FIFOFLGS
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 32
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 32
 
 
   X:E652H         SYMBOL        EP4FIFOIE
@@ -1919,7 +1919,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E65FH         SYMBOL        EPIRQ
   B:00D8H.5       SYMBOL        ERESI
   X:E664H         SYMBOL        ERRCNTLIM
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 33
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 33
 
 
   C:0B22H         SYMBOL        ER_END
@@ -1979,7 +1979,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   B:0088H.1       SYMBOL        IE0
   B:0088H.3       SYMBOL        IE1
   X:E601H         SYMBOL        IFCONFIG
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 34
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 34
 
 
   X:E648H         SYMBOL        INPKTEND
@@ -2039,7 +2039,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E60AH         SYMBOL        REVID
   B:0098H.0       SYMBOL        RI
   B:00C0H.0       SYMBOL        RI1
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 35
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 35
 
 
   B:00D0H.3       SYMBOL        RS0
@@ -2099,7 +2099,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   X:E682H         SYMBOL        WAKEUPCS
   X:E6F0H         SYMBOL        XGPIFSGLDATH
   X:E6F2H         SYMBOL        XGPIFSGLDATLNOX
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 36
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 36
 
 
   X:E6F1H         SYMBOL        XGPIFSGLDATLX
@@ -2159,7 +2159,7 @@ SYMBOL TABLE OF MODULE:  slave (FW)
   C:0888H         LINE#         130
   C:088CH         LINE#         132
   C:0890H         LINE#         134
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:40:48  PAGE 37
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/17/2019  08:47:50  PAGE 37
 
 
   C:0894H         LINE#         136
