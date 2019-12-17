@@ -99,18 +99,16 @@ void TD_Init( void )
   EP1OUTCFG = 0xA0;
   EP1INCFG = 0xA0;
 	
-//将EP2断端点配置为BULK-OUT端点，使用4倍缓冲，512字节FIFO             
-  EP2CFG = 0xA0;                //out 512 bytes, 4x, bulk
-  SYNCDELAY;
-//将EP6配置为BULK-OUT端点，                    
-  EP6CFG = 0xE0;                // in 512 bytes, 4x, bulk
-  SYNCDELAY;              
-	
-  EP4CFG = 0xA0;                
-  SYNCDELAY;                     
-  EP8CFG = 0xE0;                
-  SYNCDELAY;   
+  SYNCDELAY;                    // see TRM section 15.14
+  EP2CFG = 0xA2;
+  SYNCDELAY;                    
+  EP4CFG = 0xA0;
+  SYNCDELAY;                    
+  EP6CFG = 0xE2;
 
+  SYNCDELAY;                    
+ 
+  EP8CFG = 0xE0;
   //复位FIFO
   SYNCDELAY;
   FIFORESET = 0x80;             // activate NAK-ALL to avoid race conditions

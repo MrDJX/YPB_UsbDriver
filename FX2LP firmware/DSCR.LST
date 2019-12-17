@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  DSCR                                                                 12/16/2019 17:32:02 PAGE     1
+A51 MACRO ASSEMBLER  DSCR                                                                 12/17/2019 08:40:46 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.7.0
@@ -65,7 +65,7 @@ LOC  OBJ            LINE     SOURCE
 0113 06               55           db   DSCR_DEVQUAL         ;; Decriptor type
 0114 0002             56           dw   0002H                ;; Specification Version (BCD)
 0116 00               57           db   00H                  ;; Device class
-A51 MACRO ASSEMBLER  DSCR                                                                 12/16/2019 17:32:02 PAGE     2
+A51 MACRO ASSEMBLER  DSCR                                                                 12/17/2019 08:40:46 PAGE     2
 
 0117 00               58           db   00H                  ;; Device sub-class
 0118 00               59           db   00H                  ;; Device sub-sub-class
@@ -133,7 +133,7 @@ LOC  OBJ            LINE     SOURCE
                      121     
 014A                 122     HighSpeedConfigDscrEnd:   
                      123     
-A51 MACRO ASSEMBLER  DSCR                                                                 12/16/2019 17:32:02 PAGE     3
+A51 MACRO ASSEMBLER  DSCR                                                                 12/17/2019 08:40:46 PAGE     3
 
 014A                 124     FullSpeedConfigDscr:   
 014A 09              125           db   DSCR_CONFIG_LEN      ;; Descriptor length
@@ -201,7 +201,7 @@ LOC  OBJ            LINE     SOURCE
 0178 04              187           db   StringDscr0End-StringDscr0      ;; String descriptor length
 0179 03              188           db   DSCR_STRING
 017A 0904            189           db   09H,04H
-A51 MACRO ASSEMBLER  DSCR                                                                 12/16/2019 17:32:02 PAGE     4
+A51 MACRO ASSEMBLER  DSCR                                                                 12/17/2019 08:40:46 PAGE     4
 
 017C                 190     StringDscr0End:
                      191     
@@ -233,7 +233,7 @@ LOC  OBJ            LINE     SOURCE
 019A 0000            217           dw   0000H
                      218           end
                                    
-A51 MACRO ASSEMBLER  DSCR                                                                 12/16/2019 17:32:02 PAGE     5
+A51 MACRO ASSEMBLER  DSCR                                                                 12/17/2019 08:40:46 PAGE     5
 
 SYMBOL TABLE LISTING
 ------ ----- -------
